@@ -1,6 +1,6 @@
 Conversation Checker plugin
 ===========================
-This is a plugin for Phonegap for the Publicic Conversation Locker project.
+This is a plugin for Phonegap for the Publicis Conversation Locker project.
 
 It includes the following functionality:
 
