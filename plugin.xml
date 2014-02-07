@@ -12,15 +12,23 @@
 
     <!-- android -->
     <platform name="android">
+        <!-- config.xml updates -->
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ConversationChecker" >
                 <param name="android-package" value="com.publicislondon.plugins.conversationchecker.ConversationChecker"/>
             </feature>
         </config-file>
-        <config-file target="res/xml/config.xml" parent="plugins">
-            <plugin name="ConversationChecker" value="com.publicislondon.plugins.conversationchecker.ConversationChecker"/>
+
+        <!-- manifest updates -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:name="src/com/publicislondon/plugins/conversationchecker.services.ConversationCheckerLocalService"
+                     android:label="conversationcheckerlocalservice" />
         </config-file>
 
+        <!-- Java files -->
         <source-file src="src/android/ConversationChecker.java" target-dir="src/com/publicislondon/plugins/conversationchecker" />
+        <source-file src="src/android/receivers/CallReceiver.java" target-dir="src/com/publicislondon/plugins/conversationchecker/receivers" />
+        <source-file src="src/android/receivers/ScreenReceiver.java" target-dir="src/com/publicislondon/plugins/conversationchecker/receivers" />
+        <source-file src="src/android/services/ConversationCheckerLocalService.java" target-dir="src/com/publicislondon/plugins/conversationchecker/services" />
     </platform>
 </plugin>
