@@ -1,4 +1,4 @@
-package com.publicislondon.plugins.echo;
+package com.publicislondon.plugins.conversationchecker;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -7,9 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.util.Log;
 
-public class Echo extends CordovaPlugin  {
+public class ConversationChecker extends CordovaPlugin  {
 
-	public static final String TAG = "Echo";
+	public static final String TAG = "ConversationChecker";
 	public static final String ACTION_ECHO = "echo";
 
 	@Override
@@ -23,7 +23,7 @@ public class Echo extends CordovaPlugin  {
 			try {
 
 				String message = args.getString(0);
-				this.echo(message, callbackContext);
+				this.conversationchecker(message, callbackContext);
 				return true;
 
 			} catch (JSONException e) {
@@ -37,8 +37,8 @@ public class Echo extends CordovaPlugin  {
 		return false;
 	}
 
-	private void echo(final String message, final CallbackContext callbackContext) {
-		Log.i(TAG, "echo(): " + message);
+	private void conversationchecker(final String message, final CallbackContext callbackContext) {
+		Log.i(TAG, "conversationchecker(): " + message);
 
 		cordova.getThreadPool().execute(new Runnable() {
 			public void run() {
