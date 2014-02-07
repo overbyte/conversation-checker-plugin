@@ -1,15 +1,13 @@
 //'use strict';
 
-var echo = function (str, callback) {
+var ConversationChecker = function (str, callback) {
 	console.log('Conversation Checker is here');
 
-	//window.echo = function(str, callback) {
-		console.log('echoing: ' + str);
-        cordova.exec(callback, function(err) {
-            callback('Nothing to echo.');
-        }, "Echo", "echo", [str]);
-    //};
+	console.log('echoing: ' + str);
+    cordova.exec(callback, function(err) {
+        callback('Nothing to echo.');
+    }, "ConversationChecker", "echo", [str]);
 };
 
 
-module.exports = echo;
+module.exports = ConversationChecker;
