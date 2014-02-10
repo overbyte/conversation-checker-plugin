@@ -16,6 +16,9 @@ import android.os.IBinder;
 import android.util.Log;
 import android.widget.Toast;
 
+// Super-tight coupling to ConversationLocker but can't see a way around this
+import com.publicislondon.apps.convlock.ConversationLocker.R;
+
 /**
  * @author AllandBi
  *
@@ -83,10 +86,11 @@ public class ConversationCheckerLocalService extends Service {
 	@SuppressWarnings("deprecation")
 	private void showNotification() {
 		// TODO: should this be the NOTIFICATION constant?
+		// dealt with by using plugin.xml to update strings resource
 		CharSequence text = getText(R.string.local_service_started);
 		
 		// TODO: tightly coupled to RoomActivity - need to do something about this
-		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, RoomActivity.class), 0);
+		//PendingIntent contentIntent = PendingIntent.getActivity(this, 0, new Intent(this, RoomActivity.class), 0);
 		
 		// add icon, text and timestamp
 		// reference for non-tutorial code which was deprecated:
