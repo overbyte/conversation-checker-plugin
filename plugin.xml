@@ -30,5 +30,17 @@
         <source-file src="src/android/receivers/CallReceiver.java" target-dir="src/com/publicislondon/plugins/conversationchecker/receivers" />
         <source-file src="src/android/receivers/ScreenReceiver.java" target-dir="src/com/publicislondon/plugins/conversationchecker/receivers" />
         <source-file src="src/android/services/ConversationCheckerLocalService.java" target-dir="src/com/publicislondon/plugins/conversationchecker/services" />
+
+        <!-- strings to add to R.string resource -->
+        <config-file target="res/values/strings.xml" parent="/resources">
+            <string name="conversation_checker_service_label"></string>
+            <string name="local_service_started">Local Service Started</string>
+            <string name="local_service_stopped">Stopping Conversation Service</string>
+            <string name="local_service_label">First one to touch their phone loses!</string>
+            <string name="local_service_connected">The service connected</string>
+            <string name="local_service_disconnected">The service disconnected</string>
+            <string name="user_closed_app_toast">The user changed apps.</string>
+            <string name="user_closed_app_notify">I\'m rubbish at leaving my phone alone.</string>
+        </config-file>
     </platform>
 </plugin>
