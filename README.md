@@ -19,6 +19,8 @@ These assets need to be added to the project by hand when the plugin is added. I
 * http://docs.phonegap.com/en/3.0.0/cordova_splashscreen_splashscreen.md.html
 
 I've been using a grunt task to do this - I've been using grunt-contrib-copy. My task is set up as follows (adds app icon and notification icon from a folder called platform_merges):
+
+```javascript
     copy: {
         main: {
             files: [
@@ -48,3 +50,4 @@ I've been using a grunt task to do this - I've been using grunt-contrib-copy. My
             ]
         }
     }
+```
