@@ -21,7 +21,7 @@
 
         <!-- manifest updates -->
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <service android:name="src/com/publicislondon/plugins/conversationchecker.services.ConversationCheckerLocalService"
+            <service android:name="com.publicislondon.plugins.conversationchecker.services.ConversationCheckerLocalService"
                      android:label="conversationcheckerlocalservice" />
         </config-file>
 
